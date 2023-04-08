@@ -10,13 +10,13 @@ async function start() {
     const app = await NestFactory.create(AppModule)
 
     const config = new DocumentBuilder()
-        .setTitle('Урок по продвинотому BACKEND')
-        .setDescription('Документация REST API')
-        .setVersion('1.0.0')
-        .addTag('ULBI TV')
+        .setTitle("BACKEND tech demonstrator")
+        .setDescription("REST API DOC")
+        .setVersion("1.0.0")
+        .addTag("A1doranM")
         .build()
     const document = SwaggerModule.createDocument(app, config);
-    SwaggerModule.setup('/api/docs', app, document)
+    SwaggerModule.setup("/api/docs", app, document)
 
     app.useGlobalPipes(new ValidationPipe())
 
